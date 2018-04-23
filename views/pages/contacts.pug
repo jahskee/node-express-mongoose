@@ -1,0 +1,43 @@
+extends ../layout/layout
+
+block content  
+
+  #add-to-phone-book
+    form(action='/contacts', method='POST')
+      fieldset
+        legend New Contact
+        input#name.form-control(type='text' name='firstname', placeholder='First Name' required)
+        input#name.form-control(type='text' name='lastname', placeholder='Last Name' required)
+        input#phone.form-control(type='tel' name='phone' placeholder='Phone' required)
+        button.btn.btn-primary(type='submit') Create
+        
+        #message #{message}
+
+  #phone-book
+   
+    fieldset
+      legend Contact List      
+      #scrollit
+        table.palePurple
+          thead
+            tr
+              th ID
+              th Firstname
+              th Lastname
+              th Phone           
+              th
+          tbody
+            each contact in contacts
+              tr
+                td #{contact._id} 
+                td #{contact.firstname} 
+                td #{contact.lastname} 
+                td #{contact.phone}
+                td 
+                  - var url = '/viewcontact?id='+contact._id;
+                  a(href=url) Edit/Del                
+
+block footer
+  #footer-panel     
+      img.icon-info-footer.icon(src='/icons/info.ico')
+      span Please click 'Edit/Delete' to modify account.

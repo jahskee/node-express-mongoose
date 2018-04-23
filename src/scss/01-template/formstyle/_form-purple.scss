@@ -1,0 +1,60 @@
+  
+fieldset {
+    padding: 1rem 1rem;  
+    border: 2px solid $primary-light18-color;              
+
+    legend {
+        border: solid 2px $border-text-color;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+        padding: 0.5rem;
+    }
+
+    input, button {       
+        margin: 0;    
+        display: block;           
+        margin-top: 0.5rem;
+        height: 2rem;             
+    }      
+
+    input {
+            width: 15rem;
+    }
+
+    button {
+        margin-top: 1rem;
+        width: 10rem;
+        background: $button-color;
+        color: $text-color;
+        font-weight: bold;
+    
+        display: block;
+        margin: 1rem auto;
+        height: 2rem;
+    }
+
+    button:hover {
+        background: $button-hover-color;
+        color: $primary-color;
+    }
+
+    #message {
+        display: block;            
+        text-align: center;
+        color: green;
+        font-style: bold;
+    }
+}
+
+fieldset, legend, input, button {
+    border-radius: 12px;
+}
+
+input, button {
+    border: 0;
+}
+
+#add-to-phone-book {
+    margin-right: 1rem;   
+}

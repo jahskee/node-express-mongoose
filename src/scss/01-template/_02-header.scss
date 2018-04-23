@@ -1,0 +1,43 @@
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $primary-color;
+    border-bottom: 10px solid $border-color;
+    padding: 0;
+    margin: 0;
+    
+    .header-blocks {
+        width: 30%;
+        font-size: 1rem;
+        color: $white;      
+        padding: 0 10px;
+    }
+
+    #header-col-2 {
+        text-align: center;
+        h3#app-name {
+            font-size: 1.1rem;
+            // border: 1px solid red;
+        }
+     
+    }
+
+    #header-col-3 {
+        text-align: right;
+    
+    }
+
+    h1.company-name {
+        font-family: $header-font;
+        text-align: left;  
+        color: lighten($primary-color, 35%);
+        font-style: italic; 
+        margin: 0;
+        font-size: 1.3rem;
+    }
+    p {
+        color: $primary-color;
+     
+    }   
+}

@@ -1,0 +1,17 @@
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 80%;
+    border: 10px solid $border-color;
+    border-top: 0;
+    border-bottom: 0;
+   // height: 500px;
+    background: $canvas-color;
+
+    height: 80vh;
+    width: 75vw;
+   
+}

@@ -1,0 +1,46 @@
+extends ../layout/layout
+
+block content
+  #view-profile-container
+    #back-link
+      a#back-btn-container(href='/') 
+          img#back-img(src='/icons/back-button.svg')
+          span#back-text Back
+          
+    #view-profile
+      form(action='/viewcontact', method='POST')
+        fieldset
+          legend Profile
+          #panel-profile
+
+            #panel-profile-left
+              img#profile-img.icon(src='/images/blank-face.jpeg')
+              
+
+            #panel-profile-right
+              table#profile-table 
+                tr  
+                  td ID
+                  td #{contact._id}
+                tr
+                  td First Name
+                  td 
+                    span #{contact.firstname}
+                tr
+                  td Last Name
+                  td 
+                    span #{contact.lastname}
+                tr 
+                  td Phone
+                  td 
+                    span #{contact.phone}
+                    input(type='hidden', name='id', value=contact._id)
+                tr 
+                  td
+                  td
+                    div.green_msg #{message}
+                          
+block footer
+  #footer-panel 
+    img.icon-info-footer.icon(src='/icons/info.ico')
+    span Please click 'Back' button to view Contact List.     

@@ -1,0 +1,19 @@
+doctype html
+
+html(lang="en")
+  head
+    title #{company_name} - #{app_name}
+    meta(http-equiv="Content-Security-Policy", content="default-src *; img-src 'self' data:; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'")
+    link(rel='stylesheet', href='/stylesheets/styles.css')
+   
+  body
+    #container
+        #header.block
+            include ./includes/header
+
+        #main.block 
+            include ./includes/main
+
+        footer.block
+            include ./includes/footer
+        script(src="/javascripts/script.js")
